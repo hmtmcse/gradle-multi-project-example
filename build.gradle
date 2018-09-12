@@ -3,12 +3,27 @@ plugins {
 }
 
 group 'com.hmtmcse'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+jar{
+    manifest {
+        attributes (
+                'Implementation-Title': 'Gradle Bismillah Project',
+                'Implementation-Version': version,
+                'Main-Class': 'com.hmtmcse.touhid.Main'
+        )
+
+    }
+}
+
+tasks.withType(Jar) {
+    destinationDir = file("$rootDir/manager")
 }
 
 dependencies {
