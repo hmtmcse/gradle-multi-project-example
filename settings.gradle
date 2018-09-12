@@ -1,2 +1,3 @@
-rootProject.name = 'touhid'
+rootProject.name = 'gradleMultiProjectExample'
+include("touhid")
 
